@@ -1,0 +1,8 @@
+### Create session
+POST http://localhost:8080/session
+
+### Guess in session
+PUT http://localhost:8080/session/1/1111
+
+### Destroy session
+DELETE http://localhost:8080/session/1
