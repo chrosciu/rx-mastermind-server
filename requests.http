@@ -1,8 +1,22 @@
 ### Create session
 POST http://localhost:8080/session
 
+> {%
+    client.assert(response.status === 200);
+    client.global.set("session_id", response.body);
+%}
+
 ### Guess in session
-PUT http://localhost:8080/session/1/1111
+PUT http://localhost:8080/session/{{session_id}}/1111
+
+> {%
+    client.assert(response.status === 200);
+%}
 
 ### Destroy session
-DELETE http://localhost:8080/session/1
+DELETE http://localhost:8080/session/{{session_id}}
+
+> {%
+    client.assert(response.status === 200);
+    client.global.clear("session_id");
+%}
