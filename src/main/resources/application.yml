@@ -1,0 +1,8 @@
+spring:
+    datasource:
+        password: admin
+        url: jdbc:postgresql://localhost:5432/rx_mastermind_server
+        username: admin
+    jpa:
+        hibernate:
+            ddl-auto: update
