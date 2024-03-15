@@ -19,8 +19,7 @@ public class SessionController {
 
     @PostMapping
     public Mono<Long> create() {
-        //TODO: Implement
-        return null;
+        return sessionService.create();
     }
 
     @PutMapping("/{id}/{sample}")
