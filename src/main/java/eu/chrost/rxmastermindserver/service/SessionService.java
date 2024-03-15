@@ -1,5 +1,6 @@
 package eu.chrost.rxmastermindserver.service;
 
+import eu.chrost.rxmastermindserver.model.Session;
 import eu.chrost.rxmastermindserver.repository.ReactiveSessionRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -12,8 +13,9 @@ public class SessionService {
     private final ReactiveSessionRepository reactiveSessionRepository;
 
     public Mono<Long> create() {
-        //TODO: Implement
-        return null;
+        var code = guessService.code();
+        var session = Session.builder().code(code).build();
+        return reactiveSessionRepository.save(session).map(Session::getId);
     }
 
     public Mono<String> guess(long id, String sample) {
