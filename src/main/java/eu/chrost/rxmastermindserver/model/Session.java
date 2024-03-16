@@ -1,4 +1,4 @@
-package com.chrosciu.rxmastermindserver.model;
+package eu.chrost.rxmastermindserver.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,8 +1,8 @@
-package com.chrosciu.rxmastermindserver.controller;
+package eu.chrost.rxmastermindserver.controller;
 
-import com.chrosciu.rxmastermindserver.exception.ImproperSampleFormatException;
-import com.chrosciu.rxmastermindserver.exception.SessionNotFoundException;
-import com.chrosciu.rxmastermindserver.service.SessionService;
+import eu.chrost.rxmastermindserver.exception.ImproperSampleFormatException;
+import eu.chrost.rxmastermindserver.exception.SessionNotFoundException;
+import eu.chrost.rxmastermindserver.service.SessionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;

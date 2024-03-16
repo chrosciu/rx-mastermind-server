@@ -1,7 +1,7 @@
-package com.chrosciu.rxmastermindserver.service;
+package eu.chrost.rxmastermindserver.service;
 
-import com.chrosciu.rxmastermindserver.model.Session;
-import com.chrosciu.rxmastermindserver.repository.ReactiveSessionRepository;
+import eu.chrost.rxmastermindserver.model.Session;
+import eu.chrost.rxmastermindserver.repository.ReactiveSessionRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

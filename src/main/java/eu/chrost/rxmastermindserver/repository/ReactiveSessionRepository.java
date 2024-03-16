@@ -1,8 +1,7 @@
-package com.chrosciu.rxmastermindserver.repository;
+package eu.chrost.rxmastermindserver.repository;
 
-import com.chrosciu.rxmastermindserver.model.Session;
+import eu.chrost.rxmastermindserver.model.Session;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import reactor.core.publisher.Mono;
 import reactor.core.scheduler.Schedulers;

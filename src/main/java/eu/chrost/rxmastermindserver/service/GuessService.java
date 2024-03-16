@@ -1,6 +1,6 @@
-package com.chrosciu.rxmastermindserver.service;
+package eu.chrost.rxmastermindserver.service;
 
-import com.chrosciu.rxmastermindserver.exception.ImproperSampleFormatException;
+import eu.chrost.rxmastermindserver.exception.ImproperSampleFormatException;
 import lombok.NonNull;
 import org.springframework.stereotype.Service;
 

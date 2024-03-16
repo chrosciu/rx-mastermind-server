@@ -1,6 +1,6 @@
-package com.chrosciu.rxmastermindserver.repository;
+package eu.chrost.rxmastermindserver.repository;
 
-import com.chrosciu.rxmastermindserver.model.Session;
+import eu.chrost.rxmastermindserver.model.Session;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

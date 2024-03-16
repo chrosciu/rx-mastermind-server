@@ -1,6 +1,6 @@
-package com.chrosciu.rxmastermindserver;
+package eu.chrost.rxmastermindserver;
 
-import com.chrosciu.rxmastermindserver.repository.ReactiveSessionRepository;
+import eu.chrost.rxmastermindserver.repository.ReactiveSessionRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

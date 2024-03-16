@@ -1,8 +1,8 @@
-package com.chrosciu.rxmastermindserver.service;
+package eu.chrost.rxmastermindserver.service;
 
-import com.chrosciu.rxmastermindserver.exception.SessionNotFoundException;
-import com.chrosciu.rxmastermindserver.model.Session;
-import com.chrosciu.rxmastermindserver.repository.ReactiveSessionRepository;
+import eu.chrost.rxmastermindserver.exception.SessionNotFoundException;
+import eu.chrost.rxmastermindserver.model.Session;
+import eu.chrost.rxmastermindserver.repository.ReactiveSessionRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;

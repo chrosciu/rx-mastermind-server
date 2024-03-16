@@ -1,6 +1,6 @@
-package com.chrosciu.rxmastermindserver.service;
+package eu.chrost.rxmastermindserver.service;
 
-import com.chrosciu.rxmastermindserver.exception.ImproperSampleFormatException;
+import eu.chrost.rxmastermindserver.exception.ImproperSampleFormatException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;

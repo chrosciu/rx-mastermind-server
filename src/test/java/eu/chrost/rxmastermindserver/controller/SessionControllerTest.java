@@ -1,6 +1,6 @@
-package com.chrosciu.rxmastermindserver.controller;
+package eu.chrost.rxmastermindserver.controller;
 
-import com.chrosciu.rxmastermindserver.service.SessionService;
+import eu.chrost.rxmastermindserver.service.SessionService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
