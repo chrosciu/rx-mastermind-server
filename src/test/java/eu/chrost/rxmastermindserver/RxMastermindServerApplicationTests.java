@@ -1,24 +1,24 @@
 package eu.chrost.rxmastermindserver;
 
-import eu.chrost.rxmastermindserver.repository.ReactiveSessionRepository;
+import eu.chrost.rxmastermindserver.repository.SessionRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.reactive.server.WebTestClient;
-import org.springframework.transaction.annotation.Transactional;
 import reactor.test.StepVerifier;
 
 @SpringBootTest(webEnvironment=SpringBootTest.WebEnvironment.RANDOM_PORT)
-@Transactional
+//@Transactional
+//transactions will not work here - see https://github.com/spring-projects/spring-framework/issues/24226
 @Slf4j
 class RxMastermindServerApplicationTests {
 
     @Autowired
     private WebTestClient webTestClient;
     @Autowired
-    private ReactiveSessionRepository reactiveSessionRepository;
+    private SessionRepository sessionRepository;
 
     @Test
     void shouldCreateSessionMakeGuessAndDeleteSession() {
@@ -32,7 +32,7 @@ class RxMastermindServerApplicationTests {
                 .getResponseBody();
         log.info("{}", sessionId);
 
-        StepVerifier.create(reactiveSessionRepository.findById(sessionId))
+        StepVerifier.create(sessionRepository.findById(sessionId))
                 .assertNext(s -> Assertions.assertEquals(sessionId, s.getId()))
                 .verifyComplete();
 
@@ -77,7 +77,7 @@ class RxMastermindServerApplicationTests {
                 .exchange()
                 .expectStatus().isNotFound();
 
-        StepVerifier.create(reactiveSessionRepository.findById(sessionId))
+        StepVerifier.create(sessionRepository.findById(sessionId))
                 .verifyComplete();
 
     }

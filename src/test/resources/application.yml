@@ -1,7 +1,3 @@
 spring:
-    datasource:
-        driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
-        url: jdbc:tc:postgresql:16.2-alpine:///
-    jpa:
-        hibernate:
-            ddl-auto: update
+  r2dbc:
+    url: r2dbc:tc:postgresql:///session?TC_IMAGE_TAG=16.2-alpine
